@@ -8,10 +8,10 @@ max = 255
 out = "foo.ppm"
 
 def header(f):
-    writeFile.write(identifier + " ")
-    writeFile.write(str(rows) + " ")
-    writeFile.write(str(cols) + " ")
-    writeFile.write(str(max) + "\n")
+    f.write(identifier + " ")
+    f.write(str(rows) + " ")
+    f.write(str(cols) + " ")
+    f.write(str(max) + "\n")
 
 def body(f):
     for i in range(0, rows):
@@ -19,15 +19,15 @@ def body(f):
             r = random.randint(0, max)
             g = random.randint(0, max)
             b = random.randint(0, max)
-            writeFile.write(str(r) + " ")
-            writeFile.write(str(g) + " ")
-            writeFile.write(str(b) + "\t")
-        writeFile.write("\n")
+            f.write(str(r) + " ")
+            f.write(str(g) + " ")
+            f.write(str(b) + "\t")
+        f.write("\n")
 
 def main():
-    writeFile = open(f, 'w')
-    header(out)
-    body(out)
+    writeFile = open(out, 'w')
+    header(writeFile)
+    body(writeFile)
     writeFile.close()
 
 main()
