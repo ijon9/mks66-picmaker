@@ -29,3 +29,5 @@ def main():
     header(out)
     body(out)
     writeFile.close()
+
+main()
