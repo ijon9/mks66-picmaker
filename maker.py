@@ -1,6 +1,6 @@
 import random
 
-identifier = "P6"
+identifier = "P3"
 rows = 500 #Number of rows
 cols = 500
 max = 255
