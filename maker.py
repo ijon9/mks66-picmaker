@@ -5,7 +5,7 @@ rows = 500 #Number of rows
 cols = 500
 max = 255
 
-out = "foo.ppm"
+out = "image.ppm"
 
 def header(f):
     f.write(identifier + " ")
