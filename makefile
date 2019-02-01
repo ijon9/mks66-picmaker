@@ -1,3 +1,3 @@
-cake: maker.py
-	python maker.py
-display image.ppm
+all:
+			python maker.py
+			display image.ppm
