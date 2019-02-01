@@ -16,9 +16,9 @@ def header(f):
 def body(f):
     for i in range(0, rows):
         for i in range(0, cols):
-            r = 255#random.randint(0, max)
-            g = 0#random.randint(0, max)
-            b = 0#random.randint(0, max)
+            r = i/2
+            g = i*2 % max
+            b = (i + 5) % max
             f.write(str(r) + " ")
             f.write(str(g) + " ")
             f.write(str(b) + "\t")
